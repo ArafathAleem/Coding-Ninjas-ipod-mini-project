@@ -1,0 +1,11 @@
+.ipodContainer {
+    width: 250px;
+    height: 400px;
+    background: silver;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }

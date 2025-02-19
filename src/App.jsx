@@ -1,11 +1,11 @@
 import { useState } from "react";
-import "./App.css";
-import IPod from "./Components/iPod";
+import styles from "./App.module.css";
+import IPod from "./Components/Ipod/IPod";
 
 function App() {
   return (
     <>
-      <IPod />
+      <IPod className={styles.app} />
     </>
   );
 }
