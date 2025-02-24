@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./ClickWheel.module.css";
 
-const ClickWheel = ({ selected, setSelected, menuLength, setPlayingSong }) => {
+const ClickWheel = ({
+  selected,
+  setSelected,
+  menuLength,
+  setPlayingSong,
+  handleMenuClick,
+}) => {
   const handleRotate = (direction) => {
     setSelected((prev) =>
       direction === "prev"
@@ -20,7 +26,7 @@ const ClickWheel = ({ selected, setSelected, menuLength, setPlayingSong }) => {
     <div className={styles.clickWheel}>
       {/* Top Menu */}
       <button
-        onClick={() => handleRotate("prev")}
+        onClick={handleMenuClick}
         className={`${styles.btn} ${styles.menu}`}
       >
         Menu
@@ -35,7 +41,9 @@ const ClickWheel = ({ selected, setSelected, menuLength, setPlayingSong }) => {
       </button>
 
       {/* Center (OK) */}
-      <button className={styles.center}>OK</button>
+      <button onClick={handleMenuClick} className={styles.center}>
+        OK
+      </button>
 
       {/* Right (Next) */}
       <button
